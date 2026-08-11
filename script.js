@@ -1,11 +1,16 @@
 const searchInput = document.getElementById('search');
 
 searchInput.addEventListener('input', (event) => {
-    const value = event.target.value;
+    const value = formaString(event.target.value);
 
-    const items = document.querySelectorAll('.items .item')
+    const items = document.querySelectorAll('.items .item');
+    const noResults = document.getElementById(`no_results`);
 
-    console.log(item)
+    let hasResults = false;
+
+    items.forEach(item => {
+        
+    })
 });
 
 function formatString(value){
