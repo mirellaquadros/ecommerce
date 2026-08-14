@@ -1,40 +1,36 @@
 const searchInput = document.getElementById('search');
-
+const noResults = document.getElementById('no_results');
 
 searchInput.addEventListener('input', (event) => {
-   const value = formaString(event.target.value);
+   // Corrigido de 'formaString' para 'formatString'
+   const value = formatString(event.target.value);
 
-
-   const items = document.querySelectorAll('.items .item');
-   const noResults = document.getElementById(`no_results`);
-
+   // Atualizado para buscar os cards de produto do seu HTML
+   const items = document.querySelectorAll('.produto-card');
 
    let hasResults = false;
 
-
    items.forEach(item => {
-       if(formatString(item.textContent).indexOf(value) !== -1){
-           item.style.display = 'flex';
-
+       // Pega o texto especificamente de dentro da div produto-info
+       const productInfo = item.querySelector('.produto-info');
+       
+       if(formatString(productInfo.textContent).indexOf(value) !== -1){
+           item.style.display = 'block'; // Use 'flex' se o seu CSS original exigir
            hasResults = true;
-       } else{
+       } else {
            item.style.display = 'none';
-
        }
-      
-   })
+   });
 
-
-   if (hasResults){
+   // Mostra ou esconde a mensagem de erro
+   if (hasResults || value === '') {
        noResults.style.display = 'none';
-   } else{
+   } else {
        noResults.style.display = 'block';
    }
 });
 
-
 function formatString(value){
-   return value
-   .toLowerCase()
+   return value.toLowerCase()
    .trim();
 }

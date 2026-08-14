@@ -12,9 +12,11 @@
 
 <div class="page-container">
    <header>
-       <div class="logo-container"></div>
-       <div class="search-bar"></div>
-       <div class="header-icons"></div>
+        <div class="logo-container"></div>
+        <div>
+            <input type="text" id="search-bar" placeholder="Pesquisar produtos..."></input>
+        </div>
+        <div class="header-icons"></div>
    </header>
 
 
@@ -37,6 +39,11 @@
                <div class="header-title-placeholder"></div>
                <div class="header-link-placeholder"></div>
            </div>
+
+            <div id="no_results"s>
+                Nenhum produto encontrado.
+            </div>
+
            <div class="scroll-container">
                <div class="item-circulo"></div>
                <div class="item-circulo"></div>
@@ -59,33 +66,35 @@
 
        <section class="sec-produtos">
            <div class="section-header">
-               <div class="header-title-placeholder"></div>
-               <div class="header-link-placeholder"></div>
+               <div class="header-title-placeholder">Produtos</div>
+               <a xlink:href="pagProdutos.php" class="btn-VerTodos">
+                    Ver todos
+                </a>
            </div>
            <div class="scroll-container">
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-info"></div>
+                   <div class="produto-info">Sabonete de Morango</div>
                    <div class="btn-add"></div>
                </div>
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-info"></div>
+                   <div class="produto-info">Sabonete de Melancia</div>
                    <div class="btn-add"></div>
                </div>
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-info"></div>
+                   <div class="produto-info">Sabonete de Mirtilo</div>
                    <div class="btn-add"></div>
                </div>
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-info"></div>
+                   <div class="produto-info">Sabonete de abacaxi</div>
                    <div class="btn-add"></div>
                </div>
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-info"></div>
+                   <div class="produto-info">Produto teste</div>
                    <div class="btn-add"></div>
                </div>
            </div>
