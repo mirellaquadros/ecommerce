@@ -57,6 +57,7 @@ searchInput.addEventListener('input', (event) => {
     }
 });
 
+// --- NOVA PARTE: NAVEGAÇÃO POR TECLADO ---
 searchInput.addEventListener('keydown', function(event) {
     let items = suggestionsBox.querySelectorAll('.suggestion-item');
     if (!items || items.length === 0) return;

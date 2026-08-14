@@ -26,7 +26,6 @@
         <div class="header-icons"></div>
     </header>
 
-
    <nav></nav>
 
 
@@ -55,7 +54,6 @@
                <div class="item-circulo"></div>
            </div>
        </section>
-
 
        <section class="sec-ingredients split-section">
            <div class="text-content">
@@ -107,6 +105,7 @@
                    <div class="btn-add">
                    <a xlink:href="">Adicionar no carrinho</a>
                    </div>
+
                </div>
            </div>
        </section>
