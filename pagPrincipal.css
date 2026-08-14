@@ -1,0 +1,340 @@
+        /* Cores */
+        :root {
+           --bg-header: #ffe4e6;
+           --bg-logo: #ffcdd2;
+           --bg-nav: #e0f7fa;
+           --bg-sec-banner: #f8d7da;
+           --bg-sec-cat: #d4edda;
+           --bg-sec-ingred: #ffe8cc;
+           --bg-sec-prod: #fce4ec;
+           --bg-footer: #f3e5f5;
+          
+           --btn-light: #fff3e0;
+           --btn-add: #c8e6c9;
+           --border-color: #555;
+           --placeholder-gray: #d9d9d9;
+       }
+
+
+       /* Reset Básico */
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+      
+       body {
+           background-color: #f5f5f5;
+           padding: 40px 20px;
+       }
+
+
+       .page-container {
+           max-width: 1200px;
+           margin: 0 auto;
+           background-color: #fff;
+           box-shadow: 0 0 15px rgba(0,0,0,0.1);
+           min-width: 900px; /* Força o layout de desktop */
+       }
+
+
+       /* Header */
+       header {
+           background-color: var(--bg-header);
+           padding: 15px 30px;
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+           min-height: 80px;
+       }
+
+
+       .logo-container {
+           background-color: var(--bg-logo);
+           width: 150px;
+           height: 45px;
+           border-radius: 4px;
+       }
+
+       #no_results{
+            display: none; 
+            text-align: center; 
+            padding: 20px;
+       }
+
+
+       .header-icons {
+           margin-left: auto;
+           width: 120px;
+           height: 25px;
+           background-color: var(--placeholder-gray);
+           border-radius: 3px;
+       }
+
+       /* Barra de pesquisa */
+        .search-container {
+            position: relative;
+            flex: 1;
+            margin: 0 50px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #1b1b1b;
+            pointer-events: none;
+        }
+
+        #search {
+            display: block;
+            width: 100%; 
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #fbdcdc;
+            border-radius: 20px;
+            padding: 0 15px 0 40px;
+        }   
+
+        /* Caixa de sugestões */
+        .suggestions-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #fbdcdc;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* item sugerido*/
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        .suggestion-item:hover {
+            background-color: #fce4ec;
+        }
+
+        /* Não encontrou nada na barra de pesquisa */
+        .no-suggestion-item {
+            padding: 15px;
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            background-color: #f9f9f9;
+            cursor: default; /* Mantém o mouse como seta normal, não vira mãozinha */
+        }
+        /* Quando usar as setinhas */
+        .suggestion-item-active {
+            background-color: #fce4ec;
+            font-weight: bold;
+        }
+
+
+       /* Navegação */
+       nav {
+           background-color: var(--bg-nav);
+           height: 60px;
+       }
+
+
+       /* Main e Seções */
+       main {
+           padding: 30px;
+           display: flex;
+           flex-direction: column;
+           gap: 30px;
+       }
+
+
+       section {
+           padding: 40px 30px;
+           border-radius: 4px;
+       }
+
+
+       .section-header {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           margin-bottom: 25px;
+           height: 25px;
+       }
+
+
+       .header-title-placeholder {
+           width: 180px;
+           height: 25px;
+           background-color: rgba(0,0,0,0.1);
+           border-radius: 4px;
+           text-align: center;
+       }
+
+
+       .btn-VerTodos {
+           width: 80px;
+           height: 20px;
+           text-align: center;
+           background-color: rgba(0,0,0,0.1);
+           border-radius: 4px;
+           cursor: pointer;
+       }
+
+
+       /* Imagens */
+       .img-placeholder {
+           background-color: #fff;
+           border: 1px solid var(--border-color);
+           width: 100%;
+           min-height: 250px;
+       }
+
+
+       /* Botões */
+       .btn {
+           width: 150px;
+           height: 45px;
+           background-color: var(--btn-light);
+           border-radius: 4px;
+           margin-top: 30px;
+           text-align: center;
+       }
+
+
+       /*Seções Divididas (Lado a Lado Fixo)*/
+       .split-section {
+           display: flex;
+           flex-direction: row;
+           gap: 40px;
+       }
+       .sec-banner {
+           background-color: var(--bg-sec-banner);
+       }
+       .sec-ingredients {
+           background-color: var(--bg-sec-ingred);
+       }
+      
+       .text-content {
+           flex: 1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: flex-start;
+           min-height: 150px;
+       }
+
+
+       .image-content {
+           flex: 1;
+           display: flex;
+       }
+
+
+       /* --- Seções de Rolagem --- */
+       .scroll-container {
+           display: flex;
+           overflow-x: auto;
+           gap: 30px;
+           padding-bottom: 10px;
+           scroll-behavior: smooth;
+           scrollbar-color: transparent transparent; 
+       }
+            
+        /* 1. Define o tamanho da barra, mas deixa tudo transparente por padrão */
+        .scroll-container::-webkit-scrollbar {
+            height: 3px; /* Grossura da barra deitada */
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: transparent; /* O trilho invisível */
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: transparent; /* A "bolinha" de arrastar invisível */
+            border-radius: 10px; /* Deixa as pontas arredondadas */
+            transition: background 0.3s ease; /* (Tentativa de suavizar em alguns navegadores) */
+        }
+
+        /* 2. O QUE ACONTECE QUANDO O MOUSE PASSA POR CIMA (.scroll-container:hover) */
+        .scroll-container:hover::-webkit-scrollbar-thumb {
+            background-color: #ffcdd2; /* AQUI É A COR: Coloquei o rosinha da sua logo! */
+        }
+
+        .scroll-container:hover::-webkit-scrollbar-track {
+            background-color: #f9f9f9; /* Um fundo bem clarinho para o trilho (opcional) */
+        }
+
+
+        .scroll-container:hover {
+            scrollbar-color: #ffcdd2 #f9f9f9; /* Cor da barra e cor do fundo no Firefox */
+        }
+
+       .sec-categories {
+           background-color: var(--bg-sec-cat);
+       }
+       .item-circulo {
+           width: 120px;
+           height: 120px;
+           border-radius: 50%;
+           background-color: #fff;
+           flex-shrink: 0;
+       }
+
+       .sec-produtos {
+           background-color: var(--bg-sec-prod);
+       }
+
+       .produto-card {
+           display: flex;
+           flex-direction: column;
+           gap: 15px;
+           min-width: 210px;
+           flex-shrink: 0;
+       }
+
+       .produto-title{
+            padding: 3px;
+       }
+
+       .produto-img {
+           width: 100%;
+           aspect-ratio: 1 / 1;
+           background-color: #fff;
+       }
+       .produto-info {
+           height: 50px;
+           background-color: rgba(0,0,0,0.05);
+           border-radius: 4px;
+           padding-left: 3px;
+           padding-top: 5px;
+       }
+
+       .btn-add {
+           background-color: var(--btn-add);
+           height: 35px;
+           width: 100%;
+           border-radius: 4px;
+           margin: 5px;
+           cursor: pointer;
+           text-align: center;
+           padding-top: 7px;
+       }
+
+
+       /* Footer */
+       footer {
+           background-color: var(--bg-footer);
+           height: 100px;
+       }

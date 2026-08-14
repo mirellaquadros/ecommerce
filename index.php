@@ -1,89 +1,120 @@
 <!DOCTYPE html>
 <html>
-       <head>
-           <meta charset="UTF-8">
-           <meta http-equiv="X-UA-Compatible" content="IE=edge">
-           <meta naem="viewport" content="width=device-width, initial-scale=1.0">
-           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-           <link rel="stylesheet" href="pagPrincipal.css">
-           <tittle>Naturale</tittle>
-       </head>
-   <body>
-       <header>
-           <img src="" alt="logo" class="logo">
-           <div id="container">
-               <div class="input-group">
-                   <div class="input-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                   </div>
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta naem="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="pagPrincipal.css">
+      </head>
+  <body>
 
-                    <input id="search" type="text" class="input-field" placeholder="Pesquisar" >
-                </div>
-                
-           <!-- botao Login -->
-           <!-- botao Carrinho -->
+
+<div class="page-container">
+    <header>
+        <div class="logo-container"></div>
+        
+        <div class="search-container">
+            
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+            <input type="text" id="search" placeholder="Pesquisar produtos...">
+            <!-- Div que vai guardar as sugestões -->
+            <div id="suggestions" class="suggestions-dropdown"></div> 
+        </div>
+        
+        <div class="header-icons"></div>
+    </header>
+
+
+   <nav></nav>
+
+
+   <main>
+       <section class="sec-banner split-section">
+           <div class="text-content">
+               <div class="btn"></div>
            </div>
-       </header>
-       <nav>
+           <div class="image-content">
+               <div class="img-placeholder"></div>
+           </div>
+       </section>
 
 
-       </nav>
-       <main>
-           <section class="banner-principal">
-           <!-- Texto.                                              Imagem  -->
-           <!-- botao conheca mais -->
-           </section>
-           <section class="banner-categorias">
-                                                                   <!--Botao ver todas-->
-           <!-- linha horizontal de fotos (rolagem), bolinhas-->
-           </section>
-           <section class="banner-ingredientes">
-               <!-- botao saiba mais-->
-           </section>
-           <section>
-               <!-- Rolagem, quadradinho, foto, nome, preco, botao adicionar ao carrinho.-->                                    <!-- Botao ver todas-->
-               <div class="produtos">
-                <ul class="itens">
-                    <li class="item">
-                        <div class="item-image">
-                            <img src="" alt="produto1">
-                        </div>
+       <section class="sec-categories">
+           <div class="section-header">
+               <div class="header-title-placeholder"></div>
+               <div class="header-link-placeholder"></div>
+           </div>
 
-                        <div class="item-content">
-                            <h2 class="item-title">
-                                Produto 1
-                            </h2>
-
-                            <p class="item-preco">
-                                R$10,00
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-               </div>
-               <div class="produtos">
-                  
-               </div>
-               <div class="produtos">
-                  
-               </div>
-               <div class="produtos">
-                  
-               </div>
-               <div class="produtos">
-                  
-               </div>
-               <div class="produtos">
-                  
-               </div>
-           </section>
-       </main>
-       <footer>
+           <div class="scroll-container">
+               <div class="item-circulo"></div>
+               <div class="item-circulo"></div>
+               <div class="item-circulo"></div>
+               <div class="item-circulo"></div>
+               <div class="item-circulo"></div>
+           </div>
+       </section>
 
 
-       </footer>
-       <script src="script.js"></script>
-   </body>
+       <section class="sec-ingredients split-section">
+           <div class="text-content">
+               <div class="btn"></div>
+           </div>
+           <div class="image-content">
+               <div class="img-placeholder"></div>
+           </div>
+       </section>
+
+
+       <section class="sec-produtos">
+           <div class="section-header">
+               <div class="header-title-placeholder">Produtos</div>
+               <a xlink:href="pagProdutos.php" class="btn-VerTodos">
+                    Ver todos
+                </a>
+           </div>
+
+           <div class="scroll-container">
+               <div class="produto-card">
+                   <div class="produto-img"></div>
+                   <div class="produto-title">Sabonete de Morango</div>
+                   <div class="produto-info">Sabonete de Morango</div>
+                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
+               </div>
+               <div class="produto-card">
+                   <div class="produto-img"></div>
+                   <div class="produto-title">Sabonete de Melancia</div>
+                   <div class="produto-info">Sabonete de Melancia</div>
+                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
+               </div>
+               <div class="produto-card">
+                   <div class="produto-img"></div>
+                   <div class="produto-title">Sabonete de Mirtilo</div>
+                   <div class="produto-info">Sabonete de Mirtilo</div>
+                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
+               </div>
+               <div class="produto-card">
+                   <div class="produto-img"></div>
+                   <div class="produto-title">Sabonete de Abacaxi</div>
+                   <div class="produto-info">Sabonete de abacaxi</div>
+                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
+               </div>
+               <div class="produto-card">
+                   <div class="produto-img"></div>
+                   <div class="produto-title">Sabonete de Morango</div>
+                   <div class="produto-info">Produto teste</div>
+                   <div class="btn-add">
+                   <a xlink:href="">Adicionar no carrinho</a>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </main>
+
+
+   <footer></footer>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
-
-
