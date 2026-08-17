@@ -16,10 +16,9 @@
         
         <div class="search-container">
             
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" id="search" placeholder="Pesquisar produtos...">
-            <!-- Div que vai guardar as sugestões -->
+
             <div id="suggestions" class="suggestions-dropdown"></div> 
         </div>
         
@@ -42,25 +41,41 @@
 
        <section class="sec-categories">
            <div class="section-header">
-               <div class="header-title-placeholder"></div>
-               <div class="header-link-placeholder"></div>
+               <div class="header-title-placeholder">ingredientes</div>
+               <a xlink:href="pagProdutos.php" class="btn-VerTodos">
+                    Ver todos ->
+                </a>
            </div>
 
            <div class="scroll-container">
-               <div class="item-circulo"></div>
-               <div class="item-circulo"></div>
-               <div class="item-circulo"></div>
-               <div class="item-circulo"></div>
-               <div class="item-circulo"></div>
+               <div class="item-circulo">
+                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
+               </div>
+               <div class="item-circulo">
+                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
+               </div>
+               <div class="item-circulo">
+                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
+               </div>
+               <div class="item-circulo">
+                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
+               </div>
+               <div class="item-circulo">
+                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
+               </div>
            </div>
        </section>
 
        <section class="sec-ingredients split-section">
            <div class="text-content">
-               <div class="btn"></div>
+               <div class="btn">
+
+               </div>
            </div>
            <div class="image-content">
-               <div class="img-placeholder"></div>
+               <div class="img-placeholder">
+
+               </div>
            </div>
        </section>
 
@@ -69,7 +84,7 @@
            <div class="section-header">
                <div class="header-title-placeholder">Produtos</div>
                <a xlink:href="pagProdutos.php" class="btn-VerTodos">
-                    Ver todos
+                    Ver todos ->
                 </a>
            </div>
 
