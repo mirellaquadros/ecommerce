@@ -6,6 +6,7 @@
           <meta naem="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
           <link rel="stylesheet" href="pagPrincipal.css">
+          <title>Fruit Bubbles</title>
       </head>
   <body>
 
@@ -91,7 +92,7 @@
            <div class="scroll-container">
                <div class="produto-card">
                    <div class="produto-img"></div>
-                   <div class="produto-title">Sabonete de Morango</div>
+                   <div class="produto-title">Fraguna</div>
                    <div class="produto-info">Sabonete de Morango</div>
                    <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
                </div>
