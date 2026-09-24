@@ -1,135 +1,360 @@
+<?php
+
+$produtos = [
+    [
+        "nome" => "Sabonete Frutas Vermelhas",
+        "preco" => 00.00,
+        "imagem" => "img/morango.jpg"
+    ],
+    [
+        "nome" => "Sabonete Maracujá",
+        "preco" => 00.00,
+        "imagem" => "img/maracuja.jpg"
+    ],
+    [
+        "nome" => "Sabonete Mirtilo",
+        "preco" => 00.00,
+        "imagem" => "img/mirtilo.jpg"
+    ],
+    [
+        "nome" => "Sabonete Coco",
+        "preco" => 00.00,
+        "imagem" => "img/coco.jpg"
+    ],
+    [
+        "nome" => "Sabonete Citríco",
+        "preco" => 00.00,
+        "imagem" => "img/citrico.jpg"
+    ],
+];
+
+?>
+
 <!DOCTYPE html>
-<html>
-      <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta naem="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-          <link rel="stylesheet" href="pagPrincipal.css">
-          <title>Fruit Bubbles</title>
-      </head>
-  <body>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="page-container">
-    <header>
-        <div class="logo-container"></div>
-        
-        <div class="search-container">
-            
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="search" placeholder="Pesquisar produtos...">
+    <title>Fruit Bubbles | Sabonetes Artesanais</title>
 
-            <div id="suggestions" class="suggestions-dropdown"></div> 
+    <link rel="stylesheet" href="pagPrincipal.css">
+</head>
+
+<body>
+ 
+    <header class="header">
+
+        <div class="logo">
+            <span>fruit</span>
+            <span>bubbles</span>
+            <small>SABONETES ARTESANAIS</small>
         </div>
-        
-        <div class="header-icons"></div>
+
+        <nav class="menu">
+            <a href="index.php" class="ativo">Início</a>
+            <a href="produtos.php">Produtos</a>
+            <a href="ingredientes.php">Ingredientes</a>
+            <a href="sobre.php">Sobre nós</a>
+        </nav>
+
+        <div class="acoes">
+
+            <div class="pesquisa">
+                <input
+                    type="text"
+                    id="campoPesquisa"
+                    placeholder="Buscar produtos..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="botaoBusca"
+                    aria-label="Pesquisar"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <a href="login.php" class="icone" aria-label="Minha conta">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+                </svg>
+            </a>
+
+            <a href="carrinho.php" class="carrinho" aria-label="Carrinho">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 4h2l2.5 11h10L20 7H6"></path>
+                    <circle cx="9" cy="19" r="1.5"></circle>
+                    <circle cx="17" cy="19" r="1.5"></circle>
+                </svg>
+            </a>
+
+        </div>
+
     </header>
+ 
+    <main>
 
-   <nav></nav>
+        <section class="hero">
 
+            <div class="hero-texto">
 
-   <main>
-       <section class="sec-banner split-section">
-           <div class="text-content">
-               <div class="btn"></div>
-           </div>
-           <div class="image-content">
-               <div class="img-placeholder"></div>
-           </div>
-       </section>
+                <span class="subtitulo">
+                    FEITO COM FRUTAS. FEITO COM AMOR.
+                </span>
 
+                <h1>
+                    Sabonetes artesanais
+                    que cuidam de <strong>você</strong>
+                    e da <strong>natureza.</strong>
+                </h1>
 
-       <section class="sec-categories">
-           <div class="section-header">
-               <div class="header-title-placeholder">ingredientes</div>
-               <a xlink:href="pagProdutos.php" class="btn-VerTodos">
-                    Ver todos ->
+                <p>
+                    Nossos sabonetes são feitos com ingredientes
+                    naturais e fragrâncias frutadas que transformam
+                    seu banho em um momento único.
+                </p>
+
+                <a href="#produtos" class="botao">
+                    Conheça nossos produtos
+                    <span>→</span>
                 </a>
-           </div>
 
-           <div class="scroll-container">
-               <div class="item-circulo">
-                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
-               </div>
-               <div class="item-circulo">
-                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
-               </div>
-               <div class="item-circulo">
-                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
-               </div>
-               <div class="item-circulo">
-                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
-               </div>
-               <div class="item-circulo">
-                    <a xlink:href="pagIngrediente.php" class="btn-ingBall">
-               </div>
-           </div>
-       </section>
+            </div>
 
-       <section class="sec-ingredients split-section">
-           <div class="text-content">
-               <div class="btn">
+            <div class="hero-imagem">
+                <img src="img/banner.png" alt="Sabonetes artesanais Fruit Bubbles">
+            </div>
 
-               </div>
-           </div>
-           <div class="image-content">
-               <div class="img-placeholder">
+        </section>
+ 
+        <section class="beneficios">
 
-               </div>
-           </div>
-       </section>
+            <div class="beneficio">
+                <span class="beneficio-icone">🌿</span>
+
+                <div>
+                    <strong>Ingredientes naturais</strong>
+                    <p>Fórmulas suaves e seguras para sua pele</p>
+                </div>
+            </div>
 
 
-       <section class="sec-produtos">
-           <div class="section-header">
-               <div class="header-title-placeholder">Produtos</div>
-               <a xlink:href="pagProdutos.php" class="btn-VerTodos">
-                    Ver todos ->
+            <div class="beneficio">
+                <span class="beneficio-icone">♡</span>
+
+                <div>
+                    <strong>Feito com carinho</strong>
+                    <p>Produção artesanal em pequenos lotes</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span class="beneficio-icone">🍃</span>
+
+                <div>
+                    <strong>Sem parabenos</strong>
+                    <p>Mais cuidado para você</p>
+                </div>
+            </div>
+
+
+            <div class="beneficio">
+                <span class="beneficio-icone">♻</span>
+
+                <div>
+                    <strong>Embalagens sustentáveis</strong>
+                    <p>Cuidado com você e o planeta</p>
+                </div>
+            </div>
+
+        </section>
+ 
+        <section class="categorias">
+
+            <div class="categoria categoria-massageador">
+
+                <div class="categoria-texto">
+                    <h2>
+                        Sabonete<br>
+                        massageador
+                    </h2>
+                    <p>
+                        Com texturas que massageiam e esfoliam
+                        suavemente, promovendo relaxamento
+                        e renovação da pele.
+                    </p>
+                    <a href="#produtos" class="botao pequeno">
+                        Ver produtos
+                    </a>
+                </div>
+
+                <img
+                    src="img/massageador.jpg"
+                    alt="Sabonete massageador"
+                >
+
+            </div>
+
+
+            <div class="categoria categoria-barra">
+                <div class="categoria-texto">
+                    <h2>
+                        Sabonete<br>
+                        em barra
+                    </h2>
+                    <p>
+                        Fórmulas suaves e fragrâncias irresistíveis
+                        para uma limpeza delicada e perfumada.
+                    </p>
+                    <a href="#produtos" class="botao verde pequeno">
+                        Ver produtos
+                    </a>
+                </div>
+
+                <img
+                    src="img/barra.jpg"
+                    alt="Sabonetes em barra"
+                >
+            </div>
+
+        </section>
+ 
+        <section class="ingredientes" id="ingredientes">
+            <div class="ingredientes-imagem">
+                <img
+                    src="img/ingrediente.png"
+                    alt="Ingredientes naturais utilizados nos sabonetes"
+                >
+            </div>
+
+            <div class="ingredientes-texto">
+                <h2>
+                    Ingredientes<br>
+                    que fazem a diferença
+                </h2>
+                <p>
+                    Selecionamos cuidadosamente ingredientes
+                    naturais e nutritivos para criar sabonetes
+                    que respeitam sua pele e o meio ambiente.
+                </p>
+                <a href="ingredientes.php" class="botao verde">
+                    Ir para ingredientes
+                    <span>→</span>
                 </a>
-           </div>
+            </div>
+        </section>
+ 
+        <section class="produtos" id="produtos">
 
-           <div class="scroll-container">
-               <div class="produto-card">
-                   <div class="produto-img"></div>
-                   <div class="produto-title">Fraguna</div>
-                   <div class="produto-info">Sabonete de Morango</div>
-                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
-               </div>
-               <div class="produto-card">
-                   <div class="produto-img"></div>
-                   <div class="produto-title">Sabonete de Melancia</div>
-                   <div class="produto-info">Sabonete de Melancia</div>
-                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
-               </div>
-               <div class="produto-card">
-                   <div class="produto-img"></div>
-                   <div class="produto-title">Sabonete de Mirtilo</div>
-                   <div class="produto-info">Sabonete de Mirtilo</div>
-                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
-               </div>
-               <div class="produto-card">
-                   <div class="produto-img"></div>
-                   <div class="produto-title">Sabonete de Abacaxi</div>
-                   <div class="produto-info">Sabonete de abacaxi</div>
-                   <a xlink:href="" class="btn-add">Adicionar no carrinho</a>
-               </div>
-               <div class="produto-card">
-                   <div class="produto-img"></div>
-                   <div class="produto-title">Sabonete de Morango</div>
-                   <div class="produto-info">Produto teste</div>
-                   <div class="btn-add">
-                   <a xlink:href="">Adicionar no carrinho</a>
-                   </div>
+            <div class="titulo-secao">
+                <h2>Nossos produtos</h2>
+                <a href="produtos.php" class="ver-todos">
+                    Ver todos →
+                </a>
+            </div>
 
-               </div>
-           </div>
-       </section>
-   </main>
+            <div class="produtos-scroll">
+
+                <?php foreach ($produtos as $produto): ?>
+
+                    <article
+                        class="produto"
+                        data-nome="<?= strtolower($produto['nome']) ?>"
+                    >
+
+                        <div class="produto-imagem">
+                            <img
+                                src="<?= $produto['imagem'] ?>"
+                                alt="<?= $produto['nome'] ?>"
+                            >
+                        </div>
+
+                        <div class="produto-info">
+                            <h3>
+                                <?= $produto['nome'] ?>
+                            </h3>
+
+                            <div class="produto-final">
+
+                                <strong>
+                                    R$
+                                    <?= number_format(
+                                        $produto['preco'],
+                                        2,
+                                        ',',
+                                        '.'
+                                    ) ?>
+                                </strong>
+
+                                <button
+                                    class="adicionar"
+                                    onclick="adicionarCarrinho('<?= $produto['nome'] ?>')"
+                                >
+                                    🛒
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                <?php endforeach; ?>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contato">
+
+        <div class="footer-logo">
+            <div class="logo">
+                <span>fruit</span>
+                <span>bubbles</span>
+                <small>SABONETES ARTESANAIS</small>
+            </div>
+            <p>
+                Sabonetes artesanais feitos com ingredientes
+                naturais e muito amor para cuidar de você.
+            </p>
+            <div class="redes">
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
 
 
-   <footer></footer>
-</div>
-<script src="script.js"></script>
+        <div class="footer-coluna">
+            <h3>Institucional</h3>
+            <a href="#">Sobre nós</a>
+            <a href="ingredientes.php">Nossos ingredientes</a>
+            <a href="#">Sustentabilidade</a>
+            <a href="#">Contato</a>
+        </div>
+
+        <div class="footer-coluna">
+            <h3>Formas de pagamento</h3>
+            <div class="pagamentos">
+                <span>Dinheiro</span>
+                <span>PIX</span>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Fruit Bubbles.
+            Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
